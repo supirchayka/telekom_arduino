@@ -22,7 +22,7 @@ try {
 function sendTemperatures($pdo, $data)
 {
     try {
-        $sql = 'INSERT INTO temperature(date, state, description, temperatures) VALUES(:date)';
+        $sql = 'INSERT INTO temperature(date, state, description, temperatures) VALUES(:date, :state, :description, :temperatures)';
 
         $statement = $pdo->prepare($sql);
 
